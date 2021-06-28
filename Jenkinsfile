@@ -53,7 +53,15 @@ pipeline {
         }
     }
 
-    stage('Deploy green image') {
+    stage('Deploy blue container') {
+	    steps {
+		withAWS(credentials: 'aws', region: 'us-west-2') {
+		    sh 'kubectl apply -f ./blue_template/blue.yml'
+		}
+	    }
+	}
+
+    stage('Deploy green container') {
 	    steps {
             withAWS(credentials: 'aws', region: 'us-west-2') {
                 sh 'kubectl apply -f ./green_template/green.yml'
@@ -68,6 +76,14 @@ pipeline {
             }
 	    }
 	}
+
+    stage('Update service to blue') {
+	    steps {
+            withAWS(credentials: 'aws', region: 'us-west-2') {
+                sh 'kubectl apply -f ./blue_template/blue_service.yaml'
+            }
+	    }
+	}	
 
     stage('Clean Up image'){
         steps { 
