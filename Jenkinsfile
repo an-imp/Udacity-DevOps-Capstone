@@ -7,7 +7,7 @@ pipeline {
         }
     }
 
-    stage('Build Docker Green Image') {
+    stage('Build Docker Image') {
         steps {
             script{
                 greenDockerImage = docker.build "buyifly/udacity-devops-capstone"
@@ -15,7 +15,7 @@ pipeline {
         }
     }
 
-	stage('Push Green Image To Dockerhub') {
+	stage('Push Docker Image To Dockerhub') {
    	    steps {
             script{
                 docker.withRegistry('', registryCredential){
