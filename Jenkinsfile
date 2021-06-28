@@ -47,7 +47,7 @@ pipeline {
 	    
 	stage('Configure kubectl') {
 	    steps {
-            withAWS(credentials: 'aws-kubectl', region: 'us-west-2') {
+            withAWS(credentials: 'aws', region: 'us-west-2') {
                 sh 'aws eks --region us-west-2 update-kubeconfig --name capstone' 
             }
         }
