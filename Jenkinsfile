@@ -64,7 +64,7 @@ pipeline {
     stage('Create green service') {
 	    steps {
             withAWS(credentials: 'aws', region: 'us-west-2') {
-                sh 'kubectl apply -f ./blue/blue_service.yml'
+                sh 'kubectl apply -f ./green_template/green_service.yml'
             }
 	    }
 	}
