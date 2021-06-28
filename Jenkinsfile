@@ -1,12 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('Install Requirements') {
-      steps {
-        sh 'pip3 install -r requirements.txt'
-      }
-    }
-
     stage('Lint HTML') {
         steps {
             sh 'tidy -q -e *.html'
@@ -69,9 +63,9 @@ pipeline {
 
     stage('Create green service') {
 	    steps {
-		withAWS(credentials: 'aws', region: 'us-west-2') {
-		    sh 'kubectl apply -f ./blue/blue_service.yml'
-		}
+            withAWS(credentials: 'aws', region: 'us-west-2') {
+                sh 'kubectl apply -f ./blue/blue_service.yml'
+            }
 	    }
 	}
 
