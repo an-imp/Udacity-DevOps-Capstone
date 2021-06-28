@@ -33,9 +33,9 @@ pipeline {
                 eksctl create cluster \
                 --name capstone \
                 --version 1.16 \
-                --region us-west-2a \
+                --region us-west-2 \
                 --nodegroup-name standard-workers \
-                --node-type t2.micro \
+                --node-type t3.medium \
                 --nodes 2 \
                 --nodes-min 1 \
                 --nodes-max 3 \
