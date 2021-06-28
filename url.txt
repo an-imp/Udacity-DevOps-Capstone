@@ -1,0 +1,13 @@
+
+
+
+Ref:
+
+Jenkins Building Docker Image and Sending to Registry
+https://medium.com/@gustavo.guss/jenkins-building-docker-image-and-sending-to-registry-64b84ea45ee9
+
+Simple blue-green deployment in kubernetes using minikube
+https://andresaaap.medium.com/simple-blue-green-deployment-in-kubernetes-using-minikube-b88907b2e267
+
+how to install jenkins on ubuntu:
+https://www.ktexperts.com/how-to-install-jenkins-on-ubuntu-20-04/
