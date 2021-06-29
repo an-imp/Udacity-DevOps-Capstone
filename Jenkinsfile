@@ -83,7 +83,7 @@ pipeline {
                 sh 'kubectl apply -f ./blue_template/blue_service.yaml'
             }
 	    }
-	}	
+	}
 
     stage('Clean Up image'){
         steps { 
