@@ -80,7 +80,7 @@ pipeline {
     stage('Update service to blue') {
 	    steps {
             withAWS(credentials: 'aws', region: 'us-west-2') {
-                sh 'kubectl apply -f ./blue_template/blue_service.yaml'
+                sh 'kubectl apply -f ./blue_template/blue_service.yml'
             }
 	    }
 	}
