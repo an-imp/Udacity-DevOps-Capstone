@@ -1,8 +1,10 @@
+github url:
+https://github.com/an-imp/udacity-devOps-capstone
 
-
+deployment url:
+http://ada17206c53a84510a3b196726cd98c4-939767736.us-west-2.elb.amazonaws.com:8000/
 
 Ref:
-
 Jenkins Building Docker Image and Sending to Registry
 https://medium.com/@gustavo.guss/jenkins-building-docker-image-and-sending-to-registry-64b84ea45ee9
 
